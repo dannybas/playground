@@ -39,8 +39,13 @@
     //   changeToLoadingPage();
     //   window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
     // }
+     
     
-    window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
+    var customUrl = 'wix://platform/dashboard/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1/manage';
+    var alternateUrl = 'http://cnn.com'
+
+    setTimeout(function() { window.location=alternateUrl; }, 100);
+    window.location = customUrl;
 
   </script>
 </body>
