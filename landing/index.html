@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="manifest" href="./manifest.json">
+  <!-- <link rel="manifest" href="./manifest.json"> -->
 
   <script>
     function changeToLoadingPage() {
@@ -18,27 +18,30 @@
 
 <body>
   <script>
-    window.onload = () => {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-          .register('./sw.js');
-      }
-    }
+    // window.onload = () => {
+    //   if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker
+    //       .register('./sw.js');
+    //   }
+    // }
   </script>
   <div id="landing_page" class="Overlay OverlayLocation">
     Landing page
   </div>
 
   <script>
-    document.addEventListener('visibilitychange', () => {
-      if (window.navigator.standalone && document.visibilityState === 'visible') {
-        window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
-      }
-    });
-    if (window.navigator.standalone) {
-      changeToLoadingPage();
-      window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
-    }    
+    // document.addEventListener('visibilitychange', () => {
+    //   if (window.navigator.standalone && document.visibilityState === 'visible') {
+    //     window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
+    //   }
+    // });
+    // if (window.navigator.standalone) {
+    //   changeToLoadingPage();
+    //   window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
+    // }
+    
+    window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
+
   </script>
 </body>
 
