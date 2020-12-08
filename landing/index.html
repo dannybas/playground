@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="./manifest.json">
+
+  <script>
+    function changeToLoadingPage() {
+      document.getElementById('landing_page').style.display = 'none';
+      document.getElementById('loading_page').style.display = 'block';
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    window.onload = () => {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('./sw.js');
+      }
+    }
+  </script>
+  <div id="landing_page" class="Overlay OverlayLocation">
+    Landing page
+  </div>
+
+  <script>
+    document.addEventListener('visibilitychange', () => {
+      if (window.navigator.standalone && document.visibilityState === 'visible') {
+        window.location.href = 'wix://platform/club/d5cfaadd-5cca-41c1-aa94-96787b9bb2ac?isOpenedFromShortcut=true';
+      }
+    });
+    if (window.navigator.standalone) {
+      changeToLoadingPage();
+      window.location.href = 'wix://platform/club/d5cfaadd-5cca-41c1-aa94-96787b9bb2ac?isOpenedFromShortcut=true';
+    }
+  </script>
+</body>
+
+</html>
