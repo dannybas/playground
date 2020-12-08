@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="./landing/manifest.json">
 
   <script>
     function changeToLoadingPage() {
@@ -21,7 +21,7 @@
     window.onload = () => {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-          .register('./sw.js');
+          .register('./landing/sw.js');
       }
     }
   </script>
@@ -32,12 +32,12 @@
   <script>
     document.addEventListener('visibilitychange', () => {
       if (window.navigator.standalone && document.visibilityState === 'visible') {
-        window.location.href = 'wix://platform/club/d5cfaadd-5cca-41c1-aa94-96787b9bb2ac?isOpenedFromShortcut=true';
+        window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
       }
     });
     if (window.navigator.standalone) {
       changeToLoadingPage();
-      window.location.href = 'wix://platform/club/d5cfaadd-5cca-41c1-aa94-96787b9bb2ac?isOpenedFromShortcut=true';
+      window.location.href = 'wix://platform/club/5bb0bd21-8d89-48e0-9091-bc7dd299a1b1?isOpenedFromShortcut=true';
     }
   </script>
 </body>
